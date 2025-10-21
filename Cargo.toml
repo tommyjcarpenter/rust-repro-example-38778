@@ -1,7 +1,8 @@
-[package]
-name = "test"
-version = "0.1.0"
-edition = "2024"
+# This file allows us to use Rust crates in subdirectores
+# as dependencies in other projects from this git repo.
 
-[dependencies]
-reqwest = { version = "0.12", default-features = false, features = ["json", "http2", "rustls-tls-native-roots" ] }
+[workspace]
+resolver = "2"
+members = [
+    "subdir"
+]
